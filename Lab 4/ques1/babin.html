@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4 - Ques1</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+    <div id="studentDetails"></div>
+
+    <script>
+        // Prompt user for inputs
+        const student = {
+            name: prompt("Enter Student Name:"),
+            rollNumber: prompt("Enter Roll Number:"),
+            department: prompt("Enter Department:"),
+            projectTitle: prompt("Enter Project Title:")
+        };
+
+        // Display details using template literals
+        document.getElementById("studentDetails").innerHTML = `
+            <p><strong>Name:</strong> ${student.name}</p>
+            <p><strong>Roll Number:</strong> ${student.rollNumber}</p>
+            <p><strong>Department:</strong> ${student.department}</p>
+            <p><strong>Project Title:</strong> ${student.projectTitle}</p>
+        `;
+    </script>
+
+</body>
+</html>

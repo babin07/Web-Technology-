@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+
+    <h2>Fibonacci Series</h2>
+    <div id="fibonacci"></div>
+
+    <script>
+        const fibCount = 10;  // number of Fibonacci numbers to generate
+        let fib = [0, 1];
+
+        for(let i = 2; i < fibCount; i++) {
+            fib[i] = fib[i-1] + fib[i-2];
+        }
+
+        document.getElementById("fibonacci").textContent = fib.join(", ");
+    </script>
+
+</body>
+</html>

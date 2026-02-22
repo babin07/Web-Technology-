@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4 - Q4</title>
+</head>
+<body>
+
+    <h2>Students List</h2>
+    <div id="studentsList"></div>
+
+    <script>
+        let students = [];
+
+        function addStudent() {
+            const student = {
+                name: prompt("Enter Student Name:"),
+                rollNumber: prompt("Enter Roll Number:"),
+                department: prompt("Enter Department:"),
+                projectTitle: prompt("Enter Project Title:")
+            };
+            students.push(student);
+        }
+
+        do {
+            addStudent();
+        } while(confirm("Do you want to enter more students?"));
+
+        // Display students info
+        let output = "<ol>";
+        for(let s of students) {
+            output += `<li>
+                Name: ${s.name}, Roll No: ${s.rollNumber}, Department: ${s.department}, Project: ${s.projectTitle}
+            </li>`;
+        }
+        output += "</ol>";
+
+        document.getElementById("studentsList").innerHTML = output;
+    </script>
+
+</body>
+</html>

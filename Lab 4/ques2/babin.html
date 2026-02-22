@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table and Pattern</title>
+</head>
+<body>
+
+    <h2>Table of 12</h2>
+    <div id="table12"></div>
+
+    <h2>Pattern</h2>
+    <pre id="pattern"></pre>
+
+    <script>
+        // Table of 12 till 10
+        let tableStr = "";
+        for(let i = 1; i <= 10; i++) {
+            tableStr += `12 x ${i} = ${12 * i} <br>`;
+        }
+        document.getElementById("table12").innerHTML = tableStr;
+
+        // Pattern printing
+        let patternStr = "";
+        patternStr += "*\n";        // 1 star
+        patternStr += "***\n";      // 3 stars
+        patternStr += "*****";      // 5 stars
+
+        document.getElementById("pattern").textContent = patternStr;
+    </script>
+
+</body>
+</html>
