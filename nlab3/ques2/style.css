@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Details Table</title>
+
+    <style>
+        .table {
+            display: table;
+            width: 80%;
+            margin: 50px auto;
+            border-collapse: collapse;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header {
+            font-weight: bold;
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="table">
+
+        <div class="row header">
+            <div class="cell">Project Name</div>
+            <div class="cell">Student Name</div>
+            <div class="cell">Technology</div>
+            <div class="cell">Status</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Ecommerce Website</div>
+            <div class="cell">John Doe</div>
+            <div class="cell">HTML & CSS</div>
+            <div class="cell">Completed</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Portfolio Website</div>
+            <div class="cell">Jane Smith</div>
+            <div class="cell">HTML, CSS, JS</div>
+            <div class="cell">In Progress</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">Blog Website</div>
+            <div class="cell">David Lee</div>
+            <div class="cell">HTML & CSS</div>
+            <div class="cell">Completed</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
