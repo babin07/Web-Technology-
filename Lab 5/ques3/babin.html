@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            let namePattern = /^[A-Za-z\s]{3,}$/;
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let passwordPattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@!$#%^&*]).{8,}$/;
+
+            if (!namePattern.test(name)) {
+                alert("Name must be at least 3 characters long and contain only letters.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid email address.");
+                return false;
+            }
+
+            if (!passwordPattern.test(password)) {
+                alert("Password must be at least 8 characters long and contain 1 uppercase, 1 lowercase, 1 number and 1 special character.");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<h2>User Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+    <label>Full Name:</label><br>
+    <input type="text" id="fullname" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" required><br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+</body>
+</html>
